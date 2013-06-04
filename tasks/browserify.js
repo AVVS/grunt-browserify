@@ -23,7 +23,7 @@ module.exports = function (grunt) {
         return path.resolve(f);
       });
 
-      var b = browserify(files);
+      var b = browserify(files, opts);
       b.on('error', function (err) {
         grunt.fail.warn(err);
       });
